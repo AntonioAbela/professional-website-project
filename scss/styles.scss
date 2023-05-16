@@ -84,6 +84,62 @@ $text: #74808a;
     ----------------------------
 */
 
+/* Define grid container */
+
+/* Image container */
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Image */
+  .image-container img {
+    display: block;
+    width: 90%;
+    height: auto;
+    transition: filter 0.5s, transform 0.3s ease;
+  }
+
+  /* Hover effects */
+  .image-container:hover img {
+    filter: blur(1px);
+    transform: scale(1.00);
+  }
+
+  /* Read more link */
+  .read-more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Show read more link on hover */
+  .image-container:hover .read-more {
+    opacity: 1;
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    justify-content: center;
+  }
+
+  /* Define grid items */
+  .grid-item {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
